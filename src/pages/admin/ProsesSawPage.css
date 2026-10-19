@@ -1,0 +1,198 @@
+.qa-saw-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Error State Banner */
+.qa-saw-error-card {
+  border-left: 4px solid var(--color-danger);
+  background-color: #FFFDFD;
+}
+
+.qa-saw-error-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px;
+}
+
+.qa-saw-error-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.qa-saw-error-content {
+  flex: 1;
+}
+
+.qa-saw-error-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-danger);
+  margin-bottom: 6px;
+}
+
+.qa-saw-error-desc {
+  font-size: 13.5px;
+  color: var(--color-ink);
+  margin-bottom: 12px;
+}
+
+.qa-saw-error-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.qa-saw-error-item {
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.45;
+}
+
+.qa-saw-error-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Steps Container */
+.qa-saw-steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.qa-saw-step-card {
+  border-radius: var(--radius-xl);
+}
+
+.qa-step-title-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.qa-step-badge {
+  background-color: var(--color-ink);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 750;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.qa-step-badge--orange {
+  background: linear-gradient(135deg, var(--color-orange), #C2410C);
+  box-shadow: 0 2px 6px rgba(255, 122, 26, 0.4);
+}
+
+/* Table Enhancements */
+.qa-th-kriteria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.qa-th-code {
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--color-ink);
+}
+
+.qa-th-name {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  max-width: 130px;
+  white-space: normal;
+  line-height: 1.25;
+}
+
+.qa-formula-tag {
+  font-size: 10px;
+  font-family: monospace;
+  color: #8E8E93;
+  background-color: var(--color-canvas);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  margin-top: 4px;
+  display: inline-block;
+}
+
+/* Extrema Row */
+.qa-row-extrema {
+  background-color: #F8F8F7;
+  border-top: 2px dashed #D6D6D4;
+}
+
+.qa-extrema-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11.5px;
+}
+
+.qa-extrema-box--benefit {
+  background-color: var(--color-success-bg);
+  border: 1px solid #A7F3D0;
+  color: var(--color-success);
+}
+
+.qa-extrema-box--cost {
+  background-color: var(--color-warning-bg);
+  border: 1px solid #FDE68A;
+  color: var(--color-warning);
+}
+
+.qa-ext-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 750;
+}
+
+.qa-ext-val {
+  font-weight: 750;
+  font-size: 13px;
+}
+
+/* Rank 1 Row Highlight */
+.qa-row--rank1 {
+  background-color: rgba(255, 240, 229, 0.35);
+}
+
+.qa-score-badge-large {
+  background-color: var(--color-orange-soft);
+  color: var(--color-orange);
+  font-weight: 800;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid #FED7AA;
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .qa-saw-error-body {
+    flex-direction: column;
+  }
+}

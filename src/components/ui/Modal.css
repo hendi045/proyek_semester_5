@@ -1,0 +1,86 @@
+.qa-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(11, 11, 12, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+  animation: qaFadeIn var(--transition-fast);
+}
+
+.qa-modal-card {
+  width: 100%;
+  max-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  animation: qaScaleUp var(--transition-fast);
+}
+
+.qa-modal-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.qa-modal-title {
+  font-size: 17px;
+  font-weight: 650;
+  color: var(--color-ink);
+}
+
+.qa-modal-close {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+}
+
+.qa-modal-close:hover {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+}
+
+.qa-modal-body {
+  padding: 24px;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.6;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.qa-modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-canvas);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+@keyframes qaFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes qaScaleUp {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}

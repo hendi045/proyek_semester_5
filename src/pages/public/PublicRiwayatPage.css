@@ -1,0 +1,136 @@
+.qa-public-riwayat {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 36px;
+  padding-bottom: 48px;
+}
+
+.qa-history-disclaimer {
+  background-color: var(--color-orange-soft);
+  border: 1px solid #FED7AA;
+  color: #9A3412;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.qa-history-disclaimer svg {
+  flex-shrink: 0;
+}
+
+.qa-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.qa-history-card {
+  border-radius: var(--radius-lg);
+}
+
+.qa-history-card__body {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.qa-history-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-orange);
+}
+
+.qa-history-main-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.qa-history-timestamp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #8E8E93;
+}
+
+.qa-history-top-result {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.qa-history-top-result strong {
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.qa-history-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.qa-history-tag {
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-border);
+  color: #555555;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.qa-history-score-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.qa-score-badge {
+  background-color: var(--color-orange-soft);
+  color: var(--color-orange);
+  font-weight: 750;
+  font-size: 16px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid #FED7AA;
+}
+
+.qa-history-del-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  color: var(--color-danger);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast);
+  margin-top: 4px;
+}
+
+.qa-history-del-btn:hover {
+  background-color: var(--color-danger-bg);
+}
+
+@media (max-width: 640px) {
+  .qa-history-card__body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .qa-history-score-col {
+    align-items: flex-start;
+  }
+}

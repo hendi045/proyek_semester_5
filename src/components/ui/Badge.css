@@ -1,0 +1,63 @@
+.qa-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  line-height: 1;
+  width: fit-content;
+}
+
+.qa-badge--sm {
+  padding: 3px 8px;
+  font-size: 11px;
+}
+
+.qa-badge--md {
+  padding: 5px 11px;
+  font-size: 12px;
+}
+
+.qa-badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* Variants */
+.qa-badge--neutral {
+  background-color: #EFEFEF;
+  color: var(--color-ink);
+  border: 1px solid var(--color-border);
+}
+
+.qa-badge--orange {
+  background-color: var(--color-orange-soft);
+  color: #C2410C;
+  border: 1px solid #FED7AA;
+}
+
+.qa-badge--success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+  border: 1px solid #A7F3D0;
+}
+
+.qa-badge--warning {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning);
+  border: 1px solid #FDE68A;
+}
+
+.qa-badge--danger {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
+  border: 1px solid #FECACA;
+}
+
+.qa-badge--dark {
+  background-color: var(--color-ink);
+  color: #FFFFFF;
+  border: 1px solid #333333;
+}

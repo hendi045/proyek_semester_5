@@ -1,0 +1,602 @@
+/* ==========================================================================
+   LAPORAN PAGE CSS — QODHA AROMATIC SPK SAW
+   Screen & Print Friendly Stylesheet
+   ========================================================================== */
+
+.qa-laporan-page {
+  padding-bottom: var(--qa-space-12);
+}
+
+/* --------------------------------------------------------------------------
+   Screen Toolbar & Options
+   -------------------------------------------------------------------------- */
+.qa-print-options-card {
+  margin-bottom: var(--qa-space-6);
+  border: 1px solid var(--qa-border-subtle);
+  background: var(--qa-bg-surface);
+}
+
+.qa-print-options-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--qa-space-6);
+  padding: var(--qa-space-4) var(--qa-space-6);
+}
+
+.qa-print-opt-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--qa-space-2);
+}
+
+.qa-print-opt-title {
+  display: flex;
+  align-items: center;
+  gap: var(--qa-space-2);
+  font-size: var(--qa-text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--qa-text-muted);
+}
+
+.qa-scope-select-wrap {
+  min-width: 240px;
+}
+
+.qa-print-opt-checkboxes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--qa-space-4);
+  padding-left: var(--qa-space-4);
+  border-left: 1px solid var(--qa-border-subtle);
+}
+
+.qa-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--qa-space-2);
+  font-size: var(--qa-text-sm);
+  color: var(--qa-text-main);
+  cursor: pointer;
+  user-select: none;
+}
+
+.qa-checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--qa-orange-500);
+  cursor: pointer;
+}
+
+.qa-print-guide-tip {
+  margin-left: auto;
+  max-width: 340px;
+  font-size: var(--qa-text-xs);
+  color: var(--qa-text-muted);
+  line-height: var(--qa-leading-relaxed);
+  padding-left: var(--qa-space-4);
+  border-left: 1px dashed var(--qa-border-subtle);
+}
+
+.qa-guide-label {
+  font-weight: 700;
+  color: var(--qa-orange-500);
+  display: block;
+  margin-bottom: var(--qa-space-1);
+}
+
+/* --------------------------------------------------------------------------
+   Document Sheet Preview Container (Screen View)
+   -------------------------------------------------------------------------- */
+.qa-document-sheet-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: var(--qa-space-4);
+}
+
+.qa-document-paper {
+  width: 100%;
+  max-width: 900px;
+  background-color: #ffffff;
+  color: #111827;
+  padding: 40px 48px;
+  border-radius: var(--qa-radius-md);
+  border: 1px solid var(--qa-border-subtle);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: var(--qa-font-sans);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   1. Kop Surat
+   -------------------------------------------------------------------------- */
+.qa-doc-kop {
+  margin-bottom: 24px;
+}
+
+.qa-kop-brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.qa-kop-logo-box {
+  width: 72px;
+  height: 72px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1.5px solid #111827;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.qa-kop-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qa-kop-text {
+  flex: 1;
+}
+
+.qa-kop-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.qa-kop-sub {
+  margin: 4px 0 2px 0;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #ea580c;
+}
+
+.qa-kop-meta {
+  margin: 0;
+  font-size: 11px;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.qa-kop-contact {
+  margin: 2px 0 0 0;
+  font-size: 10px;
+  color: #6b7280;
+}
+
+.qa-kop-divider {
+  margin-top: 16px;
+  border-top: 3px solid #111827;
+  border-bottom: 1px solid #111827;
+  height: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Judul Dokumen & Metadata Grid
+   -------------------------------------------------------------------------- */
+.qa-doc-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.qa-doc-main-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #111827;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.qa-doc-reg-no {
+  margin: 6px 0 0 0;
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.qa-doc-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 12px 18px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  font-size: 12px;
+}
+
+.qa-doc-meta-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.qa-meta-key {
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qa-meta-val {
+  font-weight: 600;
+  color: #111827;
+}
+
+.qa-meta-val--valid {
+  color: #15803d;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Bagian & Tabel Dokumen
+   -------------------------------------------------------------------------- */
+.qa-doc-section {
+  margin-bottom: 24px;
+}
+
+.qa-section-title {
+  margin: 0 0 6px 0;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #111827;
+}
+
+.qa-section-desc {
+  margin: 0 0 10px 0;
+  font-size: 11px;
+  color: #4b5563;
+}
+
+.qa-doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+.qa-doc-table th,
+.qa-doc-table td {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  vertical-align: middle;
+}
+
+.qa-doc-table th {
+  background-color: #f3f4f6;
+  color: #111827;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.03em;
+}
+
+.qa-doc-tag {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.qa-doc-tag--benefit {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.qa-doc-tag--cost {
+  background-color: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.qa-doc-table-foot td {
+  background-color: #f9fafb;
+}
+
+.qa-doc-code {
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 3px;
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 10px;
+}
+
+.qa-doc-subtext {
+  font-size: 10px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.qa-doc-row--highlight td {
+  background-color: #fff7ed;
+}
+
+.qa-doc-status {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.qa-doc-status--gold {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+}
+
+.qa-doc-status--silver {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+
+.qa-doc-status--neutral {
+  background-color: #f9fafb;
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+}
+
+/* --------------------------------------------------------------------------
+   Catatan & Lembar Pengesahan
+   -------------------------------------------------------------------------- */
+.qa-doc-notes-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 11px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.qa-doc-notes-list li {
+  margin-bottom: 4px;
+}
+
+.qa-doc-notes-list code {
+  background-color: #f3f4f6;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 10px;
+  color: #111827;
+}
+
+.qa-doc-signature-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36px;
+  page-break-inside: avoid;
+}
+
+.qa-doc-sig-box {
+  width: 260px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.qa-sig-city {
+  margin: 0 0 4px 0;
+  color: #374151;
+}
+
+.qa-sig-role {
+  margin: 0;
+  font-weight: 600;
+  color: #111827;
+}
+
+.qa-sig-space {
+  height: 64px;
+}
+
+.qa-sig-name {
+  margin: 0;
+  font-weight: 700;
+  color: #111827;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.qa-sig-title {
+  margin: 4px 0 0 0;
+  font-size: 10px;
+  color: #6b7280;
+}
+
+/* --------------------------------------------------------------------------
+   Footer Dokumen
+   -------------------------------------------------------------------------- */
+.qa-doc-footer {
+  margin-top: 32px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: #9ca3af;
+}
+
+.qa-doc-footer p {
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   PRINT MEDIA STYLESHEET (@media print)
+   Khusus saat dicetak fisik atau disimpan ke PDF via window.print()
+   -------------------------------------------------------------------------- */
+@media print {
+  /* Aturan Halaman A4 */
+  @page {
+    size: A4 portrait;
+    margin: 12mm 10mm 12mm 10mm;
+  }
+
+  /* Sembunyikan elemen non-cetak */
+  .no-print,
+  .qa-admin-sidebar,
+  .qa-admin-topbar,
+  .qa-page-header,
+  .qa-print-options-card,
+  .qa-saw-error-card,
+  .qa-toast-container,
+  .qa-modal-backdrop,
+  .qa-btn,
+  header,
+  footer,
+  nav {
+    display: none !important;
+  }
+
+  /* Reset layout body & container */
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 11pt !important;
+  }
+
+  .qa-admin-layout,
+  .qa-admin-main,
+  .qa-admin-content,
+  .qa-data-page,
+  .qa-laporan-page,
+  .qa-document-sheet-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .qa-document-paper {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .qa-kop-logo-box {
+    width: 68px !important;
+    height: 68px !important;
+    border: 1px solid #000000 !important;
+    background: #ffffff !important;
+    padding: 2px !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .qa-kop-logo-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .qa-doc-table th {
+    background-color: #f3f4f6 !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .qa-doc-table td {
+    border: 1px solid #333333 !important;
+  }
+
+  .qa-doc-signature-wrapper {
+    page-break-inside: avoid;
+  }
+
+  .qa-doc-section {
+    page-break-inside: auto;
+  }
+
+  .qa-doc-table tr {
+    page-break-inside: avoid;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Responsiveness for Screen View
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .qa-print-options-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .qa-print-opt-checkboxes {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--qa-border-subtle);
+    padding-top: var(--qa-space-4);
+    width: 100%;
+  }
+
+  .qa-print-guide-tip {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px dashed var(--qa-border-subtle);
+    padding-top: var(--qa-space-4);
+    max-width: 100%;
+  }
+
+  .qa-document-paper {
+    padding: 24px 20px;
+  }
+
+  .qa-kop-brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .qa-doc-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qa-doc-signature-wrapper {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+}

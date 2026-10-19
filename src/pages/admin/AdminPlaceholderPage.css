@@ -1,0 +1,111 @@
+.qa-placeholder-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.qa-placeholder-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.qa-placeholder-card {
+  border-radius: var(--radius-xl);
+}
+
+.qa-placeholder-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 48px 32px;
+}
+
+.qa-placeholder-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-xl);
+  background-color: var(--color-orange-soft);
+  color: var(--color-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.qa-placeholder-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: 10px;
+}
+
+.qa-placeholder-sub {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  max-width: 580px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.qa-placeholder-sub code {
+  background-color: var(--color-canvas);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12.5px;
+  color: var(--color-ink);
+  font-family: monospace;
+}
+
+.qa-placeholder-specs {
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  max-width: 540px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.qa-placeholder-specs__title {
+  font-size: 13.5px;
+  font-weight: 650;
+  color: var(--color-ink);
+  margin-bottom: 12px;
+}
+
+.qa-placeholder-specs__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.qa-placeholder-spec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.qa-spec-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-orange);
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+
+.qa-placeholder-action-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,0 +1,247 @@
+/* Real-time Bobot Banner */
+.qa-bobot-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+  transition: all var(--transition-normal);
+}
+
+.qa-bobot-banner--valid {
+  background-color: #ECFDF5;
+  border-color: #A7F3D0;
+  color: #065F46;
+}
+
+.qa-bobot-banner--less {
+  background-color: #FFFBEB;
+  border-color: #FDE68A;
+  color: #92400E;
+}
+
+.qa-bobot-banner--more {
+  background-color: #FEF2F2;
+  border-color: #FECACA;
+  color: #991B1B;
+}
+
+.qa-bobot-banner__icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.qa-bobot-banner--valid .qa-bobot-banner__icon {
+  color: #059669;
+}
+
+.qa-bobot-banner--less .qa-bobot-banner__icon {
+  color: #D97706;
+}
+
+.qa-bobot-banner--more .qa-bobot-banner__icon {
+  color: #DC2626;
+}
+
+.qa-bobot-banner__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.qa-bobot-banner__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.qa-bobot-banner__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: inherit;
+}
+
+.qa-bobot-banner__badge {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.qa-bobot-banner__desc {
+  font-size: 13px;
+  line-height: 1.45;
+  color: inherit;
+  opacity: 0.95;
+}
+
+.qa-bobot-meter {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.qa-bobot-meter__fill {
+  height: 100%;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  border-radius: var(--radius-full);
+}
+
+.qa-bobot-meter__fill--valid {
+  background-color: #10B981;
+}
+
+.qa-bobot-meter__fill--warning {
+  background-color: #F59E0B;
+}
+
+.qa-bobot-meter__fill--danger {
+  background-color: #EF4444;
+}
+
+/* Bobot Grid */
+.qa-bobot-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.qa-bobot-card {
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast);
+}
+
+.qa-bobot-card:hover {
+  border-color: #D5D5D0;
+}
+
+.qa-bobot-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 20px 24px !important;
+}
+
+.qa-bobot-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.qa-bobot-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.qa-bobot-card__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.qa-bobot-card__desc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* Control Controls */
+.qa-bobot-control {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.qa-bobot-slider-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.qa-bobot-slider {
+  width: 100%;
+  accent-color: var(--color-orange);
+  cursor: pointer;
+  height: 6px;
+}
+
+.qa-slider-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.qa-bobot-number-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.qa-number-input-group {
+  display: flex;
+  align-items: center;
+  background: var(--color-canvas);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0 10px;
+  width: 100px;
+}
+
+.qa-number-input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right;
+  padding-right: 4px;
+  color: var(--color-ink);
+}
+
+.qa-number-input:focus {
+  outline: none;
+}
+
+.qa-number-unit {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.qa-decimal-tag {
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 600;
+  background: #F3F4F6;
+  color: #374151;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  min-width: 75px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .qa-bobot-control {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .qa-bobot-number-box {
+    justify-content: flex-end;
+  }
+}

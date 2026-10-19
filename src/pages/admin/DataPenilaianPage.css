@@ -1,0 +1,235 @@
+/* Matrix Completion Banner */
+.qa-penilaian-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 22px;
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+}
+
+.qa-penilaian-banner--complete {
+  background-color: #ECFDF5;
+  border-color: #A7F3D0;
+  color: #065F46;
+}
+
+.qa-penilaian-banner--incomplete {
+  background-color: #FFFBEB;
+  border-color: #FDE68A;
+  color: #92400E;
+}
+
+.qa-penilaian-banner__icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.qa-penilaian-banner--complete .qa-penilaian-banner__icon {
+  color: #059669;
+}
+
+.qa-penilaian-banner--incomplete .qa-penilaian-banner__icon {
+  color: #D97706;
+}
+
+.qa-penilaian-banner__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.qa-penilaian-banner__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: inherit;
+}
+
+.qa-penilaian-banner__desc {
+  font-size: 13px;
+  line-height: 1.45;
+  color: inherit;
+  opacity: 0.95;
+}
+
+/* Matrix Table Specifics */
+.qa-matrix-table th {
+  padding: 12px 14px;
+}
+
+.qa-matrix-th-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.qa-matrix-th-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-ink);
+  max-width: 120px;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.qa-aroma-row-title {
+  display: block;
+  font-size: 13.5px;
+  color: var(--color-ink);
+}
+
+.qa-aroma-row-sub {
+  display: block;
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}
+
+/* Score Pills */
+.qa-score-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  font-size: 13.5px;
+  font-weight: 700;
+  transition: transform var(--transition-fast);
+}
+
+.qa-score-pill--benefit {
+  background-color: #F0FDF4;
+  color: #15803D;
+  border: 1px solid #BBF7D0;
+}
+
+.qa-score-pill--cost {
+  background-color: #FFFBEB;
+  color: #B45309;
+  border: 1px solid #FDE68A;
+}
+
+.qa-score-pill--empty {
+  width: auto;
+  padding: 2px 8px;
+  background-color: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+  font-size: 11px;
+}
+
+/* Ratings Form in Modal */
+.qa-ratings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.qa-ratings-form__hero {
+  background-color: var(--color-canvas);
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.qa-ratings-aroma-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 4px;
+  color: var(--color-ink);
+}
+
+.qa-ratings-aroma-cat {
+  font-size: 12.5px;
+  color: var(--color-orange);
+  font-weight: 500;
+}
+
+.qa-ratings-field-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 440px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.qa-rating-input-row {
+  background: var(--color-paper);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.qa-rating-input-row__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.qa-rating-k-title {
+  font-size: 13.5px;
+  color: var(--color-ink);
+}
+
+.qa-rating-k-desc {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  line-height: 1.35;
+}
+
+/* Scale Buttons */
+.qa-scale-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.qa-scale-btn {
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-canvas);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-ink);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.qa-scale-btn:hover {
+  border-color: var(--color-orange);
+  background-color: var(--color-orange-soft);
+  color: var(--color-orange);
+}
+
+.qa-scale-btn--active {
+  background-color: var(--color-ink) !important;
+  color: var(--color-paper) !important;
+  border-color: var(--color-ink) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.qa-scale-guide-text {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  background-color: #FAFAFA;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--color-border);
+}
+
+.qa-scale-guide-text strong {
+  color: var(--color-ink);
+}
