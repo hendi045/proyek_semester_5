@@ -265,49 +265,51 @@ export function LaporanPage({ onNavigate }) {
                 Perhitungan preferensi SAW didasarkan pada {activeKriteria.length} kriteria penilaian aktif dengan total bobot akumulasi tepat 100%:
               </p>
 
-              <table className="qa-doc-table">
-                <thead>
-                  <tr>
-                    <th style={{ width: '40px', textAlign: 'center' }}>No</th>
-                    <th style={{ width: '90px' }}>Kode</th>
-                    <th>Nama Parameter Kriteria</th>
-                    <th style={{ width: '130px', textAlign: 'center' }}>Sifat / Atribut</th>
-                    <th style={{ width: '110px', textAlign: 'right' }}>Bobot (%)</th>
-                    <th style={{ width: '120px', textAlign: 'right' }}>Nilai Bobot (w_j)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {activeKriteria.map((k, idx) => (
-                    <tr key={k.kode}>
-                      <td style={{ textAlign: 'center' }}>{idx + 1}</td>
-                      <td>
-                        <strong>{k.kode}</strong>
+              <div className="qa-doc-table-wrap">
+                <table className="qa-doc-table">
+                  <thead>
+                    <tr>
+                      <th style={{ width: '40px', textAlign: 'center' }}>No</th>
+                      <th style={{ width: '90px' }}>Kode</th>
+                      <th>Nama Parameter Kriteria</th>
+                      <th style={{ width: '130px', textAlign: 'center' }}>Sifat / Atribut</th>
+                      <th style={{ width: '110px', textAlign: 'right' }}>Bobot (%)</th>
+                      <th style={{ width: '120px', textAlign: 'right' }}>Nilai Bobot (w_j)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {activeKriteria.map((k, idx) => (
+                      <tr key={k.kode}>
+                        <td style={{ textAlign: 'center' }}>{idx + 1}</td>
+                        <td>
+                          <strong>{k.kode}</strong>
+                        </td>
+                        <td>{k.nama}</td>
+                        <td style={{ textAlign: 'center' }}>
+                          <span className={`qa-doc-tag qa-doc-tag--${k.tipe}`}>
+                            {k.tipe === 'benefit' ? 'Benefit (Maksimal)' : 'Cost (Minimal)'}
+                          </span>
+                        </td>
+                        <td style={{ textAlign: 'right', fontWeight: 600 }}>{k.bobot}%</td>
+                        <td style={{ textAlign: 'right', fontFamily: 'monospace' }}>
+                          {(k.bobot / 100).toFixed(2)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                  <tfoot>
+                    <tr className="qa-doc-table-foot">
+                      <td colSpan={4} style={{ textAlign: 'right', fontWeight: 700 }}>
+                        Total Akumulasi Bobot Kriteria (W):
                       </td>
-                      <td>{k.nama}</td>
-                      <td style={{ textAlign: 'center' }}>
-                        <span className={`qa-doc-tag qa-doc-tag--${k.tipe}`}>
-                          {k.tipe === 'benefit' ? 'Benefit (Maksimal)' : 'Cost (Minimal)'}
-                        </span>
-                      </td>
-                      <td style={{ textAlign: 'right', fontWeight: 600 }}>{k.bobot}%</td>
-                      <td style={{ textAlign: 'right', fontFamily: 'monospace' }}>
-                        {(k.bobot / 100).toFixed(2)}
+                      <td style={{ textAlign: 'right', fontWeight: 700 }}>100%</td>
+                      <td style={{ textAlign: 'right', fontFamily: 'monospace', fontWeight: 700 }}>
+                        1.00
                       </td>
                     </tr>
-                  ))}
-                </tbody>
-                <tfoot>
-                  <tr className="qa-doc-table-foot">
-                    <td colSpan={4} style={{ textAlign: 'right', fontWeight: 700 }}>
-                      Total Akumulasi Bobot Kriteria (W):
-                    </td>
-                    <td style={{ textAlign: 'right', fontWeight: 700 }}>100%</td>
-                    <td style={{ textAlign: 'right', fontFamily: 'monospace', fontWeight: 700 }}>
-                      1.00
-                    </td>
-                  </tr>
-                </tfoot>
-              </table>
+                  </tfoot>
+                </table>
+              </div>
             </div>
           )}
 
@@ -320,54 +322,56 @@ export function LaporanPage({ onNavigate }) {
               Berikut adalah urutan alternatif wewangian sunah berdasarkan akumulasi nilai preferensi (V_i) dari skor tertinggi ke terendah:
             </p>
 
-            <table className="qa-doc-table">
-              <thead>
-                <tr>
-                  <th style={{ width: '50px', textAlign: 'center' }}>Rank</th>
-                  <th style={{ width: '80px' }}>Kode</th>
-                  <th>Nama Alternatif Aroma</th>
-                  <th style={{ width: '120px' }}>Keluarga Aroma</th>
-                  <th style={{ width: '110px', textAlign: 'center' }}>Skor (V_i)</th>
-                  <th style={{ width: '110px', textAlign: 'center' }}>Persentase</th>
-                  <th style={{ width: '170px', textAlign: 'center' }}>Status Rekomendasi</th>
-                </tr>
-              </thead>
-              <tbody>
-                {displayedRankings.map((item) => (
-                  <tr
-                    key={item.id}
-                    className={item.rank === 1 ? 'qa-doc-row--highlight' : ''}
-                  >
-                    <td style={{ textAlign: 'center' }}>
-                      <strong>#{item.rank}</strong>
-                    </td>
-                    <td>
-                      <span className="qa-doc-code">{item.id}</span>
-                    </td>
-                    <td>
-                      <strong>{item.nama}</strong>
-                      <div className="qa-doc-subtext">{item.karakteristik}</div>
-                    </td>
-                    <td>{item.kategori}</td>
-                    <td style={{ textAlign: 'center', fontFamily: 'monospace', fontWeight: 700 }}>
-                      {item.score.toFixed(4)}
-                    </td>
-                    <td style={{ textAlign: 'center', fontWeight: 700 }}>
-                      {item.scorePercent}
-                    </td>
-                    <td style={{ textAlign: 'center' }}>
-                      <span
-                        className={`qa-doc-status qa-doc-status--${
-                          item.rank === 1 ? 'gold' : item.rank <= 3 ? 'silver' : 'neutral'
-                        }`}
-                      >
-                        {item.statusRecommendation}
-                      </span>
-                    </td>
+            <div className="qa-doc-table-wrap">
+              <table className="qa-doc-table">
+                <thead>
+                  <tr>
+                    <th style={{ width: '50px', textAlign: 'center' }}>Rank</th>
+                    <th style={{ width: '80px' }}>Kode</th>
+                    <th>Nama Alternatif Aroma</th>
+                    <th style={{ width: '120px' }}>Keluarga Aroma</th>
+                    <th style={{ width: '110px', textAlign: 'center' }}>Skor (V_i)</th>
+                    <th style={{ width: '110px', textAlign: 'center' }}>Persentase</th>
+                    <th style={{ width: '170px', textAlign: 'center' }}>Status Rekomendasi</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {displayedRankings.map((item) => (
+                    <tr
+                      key={item.id}
+                      className={item.rank === 1 ? 'qa-doc-row--highlight' : ''}
+                    >
+                      <td style={{ textAlign: 'center' }}>
+                        <strong>#{item.rank}</strong>
+                      </td>
+                      <td>
+                        <span className="qa-doc-code">{item.id}</span>
+                      </td>
+                      <td>
+                        <strong>{item.nama}</strong>
+                        <div className="qa-doc-subtext">{item.karakteristik}</div>
+                      </td>
+                      <td>{item.kategori}</td>
+                      <td style={{ textAlign: 'center', fontFamily: 'monospace', fontWeight: 700 }}>
+                        {item.score.toFixed(4)}
+                      </td>
+                      <td style={{ textAlign: 'center', fontWeight: 700 }}>
+                        {item.scorePercent}
+                      </td>
+                      <td style={{ textAlign: 'center' }}>
+                        <span
+                          className={`qa-doc-status qa-doc-status--${
+                            item.rank === 1 ? 'gold' : item.rank <= 3 ? 'silver' : 'neutral'
+                          }`}
+                        >
+                          {item.statusRecommendation}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
           {/* 5. BAGIAN III: CATATAN METODOLOGI & DISCLAIMER */}

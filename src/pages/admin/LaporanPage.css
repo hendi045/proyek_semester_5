@@ -550,6 +550,39 @@
   .qa-doc-table tr {
     page-break-inside: avoid;
   }
+
+  .qa-doc-table-wrap {
+    overflow: visible !important;
+    margin: 0 !important;
+  }
+
+  .qa-doc-table {
+    min-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Table Wrap Container (Screen View)
+   -------------------------------------------------------------------------- */
+.qa-doc-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 12px 0 16px 0;
+}
+
+.qa-doc-table-wrap::-webkit-scrollbar {
+  height: 5px;
+}
+
+.qa-doc-table-wrap::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: var(--qa-radius-full);
+}
+
+.qa-doc-table {
+  min-width: 620px;
 }
 
 /* --------------------------------------------------------------------------
@@ -581,7 +614,8 @@
   }
 
   .qa-document-paper {
-    padding: 24px 20px;
+    padding: 20px 14px;
+    border-radius: var(--qa-radius-sm);
   }
 
   .qa-kop-brand {
@@ -590,8 +624,27 @@
     gap: 12px;
   }
 
+  .qa-kop-logo-box {
+    width: 56px;
+    height: 56px;
+  }
+
+  .qa-kop-title {
+    font-size: 15px;
+  }
+
+  .qa-kop-sub {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .qa-doc-main-title {
+    font-size: 16px;
+  }
+
   .qa-doc-meta-grid {
     grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .qa-doc-signature-wrapper {

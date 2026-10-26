@@ -233,3 +233,29 @@
 .qa-scale-guide-text strong {
   color: var(--color-ink);
 }
+
+/* Mobile Responsiveness */
+.qa-matrix-table {
+  min-width: 820px;
+}
+
+@media (max-width: 640px) {
+  .qa-penilaian-banner {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+  .qa-ratings-form__hero {
+    padding: 12px 14px;
+  }
+  .qa-rating-input-row {
+    padding: 12px 14px;
+    gap: 8px;
+  }
+  .qa-scale-buttons {
+    gap: 6px;
+  }
+  .qa-scale-btn {
+    height: 38px;
+    font-size: 14px;
+  }
+}

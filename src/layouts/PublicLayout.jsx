@@ -69,10 +69,11 @@ export function PublicLayout({
             </button>
           </nav>
 
-          {/* Action Button: Demo Admin Portal & PWA Install */}
+          {/* Action Button: Demo Admin Portal & PWA Install (Desktop) */}
           <div className="qa-public-actions">
             {isInstallable && !isInstalled && (
               <Button
+                className="qa-public-action-btn"
                 variant="primary"
                 size="sm"
                 icon={Download}
@@ -83,6 +84,7 @@ export function PublicLayout({
             )}
 
             <Button
+              className="qa-public-action-btn"
               variant="outline"
               size="sm"
               icon={Lock}
@@ -102,51 +104,58 @@ export function PublicLayout({
           </div>
         </div>
 
-        {/* Mobile Navigation Dropdown */}
+        {/* Mobile Navigation Dropdown & Backdrop */}
         {mobileMenuOpen && (
-          <div className="qa-public-mobile-menu">
-            <div className="container qa-public-mobile-menu__inner">
-              <button
-                type="button"
-                className={`qa-public-mobile-item ${currentPath === 'public-rekomendasi' ? 'qa-public-mobile-item--active' : ''}`}
-                onClick={() => handleNav('public-rekomendasi')}
-              >
-                <Compass size={18} />
-                <span>Rekomendasi Aroma</span>
-              </button>
-              <button
-                type="button"
-                className={`qa-public-mobile-item ${currentPath === 'public-riwayat' ? 'qa-public-mobile-item--active' : ''}`}
-                onClick={() => handleNav('public-riwayat')}
-              >
-                <History size={18} />
-                <span>Riwayat Simulasi</span>
-              </button>
-
-              {isInstallable && !isInstalled && (
+          <>
+            <div
+              className="qa-public-backdrop"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-hidden="true"
+            />
+            <div className="qa-public-mobile-menu">
+              <div className="container qa-public-mobile-menu__inner">
                 <button
                   type="button"
-                  className="qa-public-mobile-item qa-public-mobile-item--install"
-                  onClick={() => {
-                    installApp();
-                    setMobileMenuOpen(false);
-                  }}
+                  className={`qa-public-mobile-item ${currentPath === 'public-rekomendasi' ? 'qa-public-mobile-item--active' : ''}`}
+                  onClick={() => handleNav('public-rekomendasi')}
                 >
-                  <Download size={18} />
-                  <span>Pasang Aplikasi (PWA)</span>
+                  <Compass size={18} />
+                  <span>Rekomendasi Aroma</span>
                 </button>
-              )}
+                <button
+                  type="button"
+                  className={`qa-public-mobile-item ${currentPath === 'public-riwayat' ? 'qa-public-mobile-item--active' : ''}`}
+                  onClick={() => handleNav('public-riwayat')}
+                >
+                  <History size={18} />
+                  <span>Riwayat Simulasi</span>
+                </button>
 
-              <button
-                type="button"
-                className="qa-public-mobile-item qa-public-mobile-item--admin"
-                onClick={() => handleNav('login')}
-              >
-                <Lock size={18} />
-                <span>Masuk Portal Admin (Demo)</span>
-              </button>
+                {isInstallable && !isInstalled && (
+                  <button
+                    type="button"
+                    className="qa-public-mobile-item qa-public-mobile-item--install"
+                    onClick={() => {
+                      installApp();
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    <Download size={18} />
+                    <span>Pasang Aplikasi (PWA)</span>
+                  </button>
+                )}
+
+                <button
+                  type="button"
+                  className="qa-public-mobile-item qa-public-mobile-item--admin"
+                  onClick={() => handleNav('login')}
+                >
+                  <Lock size={18} />
+                  <span>Masuk Portal Admin (Demo)</span>
+                </button>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </header>
 

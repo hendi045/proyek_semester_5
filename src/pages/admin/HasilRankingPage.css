@@ -248,6 +248,32 @@
 
 @media (max-width: 900px) {
   .qa-podium-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .qa-podium-card--rank1 {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .qa-podium-body {
+    padding: 18px 16px;
+  }
+  .qa-breakdown-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .qa-summary-score {
+    align-items: flex-start;
+  }
+  .qa-b-math {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .qa-ranking-page .qa-table {
+    min-width: 680px;
   }
 }

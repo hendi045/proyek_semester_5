@@ -381,13 +381,53 @@
 }
 
 @media (max-width: 768px) {
+  .qa-hero {
+    padding: 44px 0 36px 0;
+  }
   .qa-hero__title {
-    font-size: 28px;
+    font-size: 24px;
+  }
+  .qa-hero__desc {
+    font-size: 13.5px;
+    margin-bottom: 24px;
+  }
+  .qa-filter-panel {
+    padding: 18px 16px;
+    border-radius: var(--radius-lg);
   }
   .qa-filter-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
   .qa-aroma-cards-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .qa-results-title {
+    font-size: 20px;
+  }
+  .qa-detail-criteria-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .qa-hero {
+    padding: 32px 0 28px 0;
+  }
+  .qa-hero__title {
+    font-size: 21px;
+    line-height: 1.35;
+  }
+  .qa-hero__logo-img {
+    width: 76px;
+    height: 76px;
+  }
+  .qa-hero__badge {
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+  .qa-aroma-card__body {
+    padding: 18px 16px;
   }
 }

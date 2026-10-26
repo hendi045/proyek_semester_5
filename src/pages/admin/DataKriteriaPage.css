@@ -135,5 +135,15 @@
 @media (max-width: 768px) {
   .qa-education-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .qa-education-body {
+    padding: 16px !important;
+  }
+  .qa-table {
+    min-width: 680px;
   }
 }

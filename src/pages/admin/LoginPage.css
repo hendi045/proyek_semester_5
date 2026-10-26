@@ -170,3 +170,21 @@
   justify-content: center;
   padding-top: 4px;
 }
+
+@media (max-width: 480px) {
+  .qa-login-container {
+    padding: 16px 12px;
+  }
+  .qa-login-card {
+    padding: 22px 18px;
+    border-radius: var(--radius-lg);
+  }
+  .qa-login-title {
+    font-size: 19px;
+  }
+  .qa-login-logo-img {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 12px;
+  }
+}

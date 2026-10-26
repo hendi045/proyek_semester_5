@@ -334,6 +334,7 @@
 
 @media (max-width: 768px) {
   .qa-admin-sidebar {
+    width: min(280px, 85vw);
     transform: translateX(-100%);
     box-shadow: var(--shadow-lg);
     z-index: 60;
@@ -348,12 +349,25 @@
     width: 100%;
   }
 
+  .qa-admin-topbar {
+    padding: 0 16px;
+    height: 58px;
+  }
+
   .qa-admin-sidebar__close {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
   }
 
   .qa-admin-menu-toggle {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
   }
 
   .qa-admin-backdrop {
@@ -366,6 +380,32 @@
 
   .qa-admin-profile__info {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .qa-admin-content {
+    padding: 16px 12px 32px 12px;
+  }
+
+  .qa-breadcrumb-root,
+  .qa-breadcrumb-separator {
+    display: none;
+  }
+
+  .qa-breadcrumb-active {
+    font-size: 13px;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .demo-badge-banner {
+    font-size: 11px;
+    padding: 6px 10px;
+    text-align: left;
+    align-items: flex-start;
   }
 }
 

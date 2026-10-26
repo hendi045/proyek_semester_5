@@ -410,9 +410,24 @@
 @media (max-width: 600px) {
   .qa-kpi-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
-  .qa-page-title {
-    font-size: 24px;
+  .qa-kpi-body {
+    padding: 16px;
+  }
+  .qa-kpi-value {
+    font-size: 26px;
+  }
+  .qa-kpi-icon-wrap {
+    width: 44px;
+    height: 44px;
+  }
+  .qa-ranking-item {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  .qa-ranking-name {
+    font-size: 13.5px;
   }
   .qa-quick-actions__grid {
     grid-template-columns: 1fr;
