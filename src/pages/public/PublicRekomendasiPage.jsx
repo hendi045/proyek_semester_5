@@ -104,7 +104,7 @@ export function PublicRekomendasiPage() {
           </h1>
 
           <p className="qa-hero__desc">
-            Sistem cerdas penentu rekomendasi wewangian sunah terbaik berbasis analisis multikriteria: Kesesuaian Riwayat Sunah, Ketahanan Aroma (Longevity), Kelembutan Karakter Aroma, Popularitas Pengguna, dan Efisiensi Harga secara objektif dan terukur.
+            Sistem cerdas penentu rekomendasi wewangian sunah terbaik berbasis analisis multikriteria: kesesuaian riwayat sunah, karakter aroma, ketahanan, intensitas, harga, tujuan penggunaan, dan tingkat kesukaan aroma secara objektif dan terukur.
           </p>
 
           {/* Interactive Preference Box */}

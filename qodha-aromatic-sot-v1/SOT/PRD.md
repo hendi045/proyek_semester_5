@@ -145,14 +145,16 @@ Kriteria awal yang disarankan untuk demo:
 
 | Kode | Kriteria | Tipe | Bobot awal |
 |---|---|---|---:|
-| C1 | Kesesuaian karakter aroma | Benefit | 25% |
-| C2 | Ketahanan aroma | Benefit | 25% |
-| C3 | Kesegaran aroma | Benefit | 20% |
-| C4 | Kelembutan/intensitas yang nyaman | Benefit | 15% |
+| C1 | Kesesuaian riwayat sunah | Benefit | 20% |
+| C2 | Karakter aroma | Benefit | 15% |
+| C3 | Ketahanan | Benefit | 15% |
+| C4 | Intensitas | Benefit | 10% |
 | C5 | Harga | Cost | 15% |
+| C6 | Tujuan penggunaan | Benefit | 10% |
+| C7 | Tingkat kesukaan aroma | Benefit | 15% |
 |  | **Total** |  | **100%** |
 
-Skor C1–C4 pada data contoh memakai rentang 1–5 yang sama untuk semua alternatif. C5 menggunakan harga numerik dummy. Kriteria dan bobot tersebut merupakan nilai awal prototipe yang dapat direvisi sebelum implementasi.
+Kriteria meliputi kesesuaian riwayat sunah, karakter aroma, ketahanan, intensitas, harga, tujuan penggunaan, dan tingkat kesukaan aroma. Skor C1–C4 dan C6–C7 pada data contoh memakai rentang 1–5 yang sama untuk semua alternatif. C5 menggunakan skala 1–5 untuk efisiensi harga dummy. Kriteria dan bobot tersebut merupakan nilai awal prototipe yang dapat direvisi sebelum implementasi.
 
 ## 9. Persyaratan antarmuka dan kualitas
 

@@ -32,10 +32,10 @@ const PLACEHOLDER_DETAILS = {
     title: 'Data Kriteria SAW',
     targetPhase: 'Phase 3',
     phaseName: 'Data Master dan Penilaian',
-    description: 'Manajemen kriteria evaluasi (C1-C5), penetapan tipe benefit atau cost, dan deskripsi skala penilaian.',
+    description: 'Manajemen kriteria evaluasi (C1-C7), penetapan tipe benefit atau cost, dan deskripsi skala penilaian.',
     icon: Sliders,
     specs: [
-      'Daftar 5 kriteria dasar (Kesesuaian Sunah, Longevity, Kelembutan, Popularitas, Ekonomis)',
+      'Daftar 7 kriteria dasar (Kesesuaian Sunah, Karakter Aroma, Ketahanan, Intensitas, Harga, Tujuan Penggunaan, Tingkat Kesukaan)',
       'Penetapan sifat kriteria: Benefit (keuntungan) atau Cost (biaya)',
       'Rentang nilai dan panduan penskalaan (1-5)'
     ]

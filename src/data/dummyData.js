@@ -8,45 +8,63 @@ export const DUMMY_KRITERIA = [
     kode: 'C1',
     nama: 'Kesesuaian Riwayat Sunah',
     tipe: 'benefit',
-    bobot: 25,
+    bobot: 20,
     rentang: '1 - 5 (Skala preferensi riwayat sunah)',
     deskripsi: 'Tingkat penyebutan dan penekanan dalam riwayat hadits/atsar sunah wewangian.',
     status: 'aktif'
   },
   {
     kode: 'C2',
-    nama: 'Ketahanan Aroma (Longevity)',
+    nama: 'Karakter Aroma',
     tipe: 'benefit',
-    bobot: 20,
-    rentang: '1 - 5 (Skala jam ketahanan aroma)',
-    deskripsi: 'Daya tahan jejak aroma saat diaplikasikan pada pakaian atau kulit.',
+    bobot: 15,
+    rentang: '1 - 5 (Skala keindahan & keharmonisan karakter)',
+    deskripsi: 'Keseimbangan, kelembutan, dan keunikan profil aroma wewangian.',
     status: 'aktif'
   },
   {
     kode: 'C3',
-    nama: 'Kelembutan Karakter Aroma',
+    nama: 'Ketahanan',
     tipe: 'benefit',
-    bobot: 20,
-    rentang: '1 - 5 (Skala kelembutan vs ketajaman)',
-    deskripsi: 'Keseimbangan aroma agar nyaman di hidung, tidak menyengat berlebih.',
+    bobot: 15,
+    rentang: '1 - 5 (Skala jam ketahanan aroma)',
+    deskripsi: 'Daya tahan jejak aroma (longevity) saat diaplikasikan pada pakaian atau kulit.',
     status: 'aktif'
   },
   {
     kode: 'C4',
-    nama: 'Popularitas & Kesukaan Pengguna',
+    nama: 'Intensitas',
     tipe: 'benefit',
-    bobot: 15,
-    rentang: '1 - 5 (Skala penerimaan publik)',
-    deskripsi: 'Tingkat kesukaan umum jemaah dan pelanggan terhadap profil aroma.',
+    bobot: 10,
+    rentang: '1 - 5 (Skala proyeksi & semerbak wangi)',
+    deskripsi: 'Kekuatan semerbak wangi dan proyeksi jejak aroma (sillage) di sekitar pemakai.',
     status: 'aktif'
   },
   {
     kode: 'C5',
-    nama: 'Tingkat Harga / Ekonomis',
+    nama: 'Harga',
     tipe: 'cost',
-    bobot: 20,
+    bobot: 15,
     rentang: '1 - 5 (1: sangat terjangkau, 5: sangat premium)',
     deskripsi: 'Kriteria biaya: semakin rendah nilai biaya/harga per ml, semakin menguntungkan konsumen.',
+    status: 'aktif'
+  },
+  {
+    kode: 'C6',
+    nama: 'Tujuan Penggunaan',
+    tipe: 'benefit',
+    bobot: 10,
+    rentang: '1 - 5 (Skala fleksibilitas fungsi ibadah)',
+    deskripsi: 'Relevansi dan fleksibilitas wewangian untuk berbagai momentum ibadah (shalat berjamaah, Jumat, iktikaf, kajian).',
+    status: 'aktif'
+  },
+  {
+    kode: 'C7',
+    nama: 'Tingkat Kesukaan Aroma',
+    tipe: 'benefit',
+    bobot: 15,
+    rentang: '1 - 5 (Skala penerimaan & kesukaan publik)',
+    deskripsi: 'Tingkat kesukaan umum jemaah dan penerimaan konsumen terhadap aroma.',
     status: 'aktif'
   }
 ];
@@ -62,7 +80,7 @@ export const DUMMY_AROMA = [
     tag: ['Sunah Utama', 'Lembut', 'Best Seller'],
     hargaDummy: 'Rp 65.000 / 6ml',
     status: 'aktif',
-    penilaian: { C1: 5, C2: 4, C3: 5, C4: 5, C5: 2 }
+    penilaian: { C1: 5, C2: 5, C3: 4, C4: 4, C5: 2, C6: 5, C7: 5 }
   },
   {
     id: 'ARM-02',
@@ -74,7 +92,7 @@ export const DUMMY_AROMA = [
     tag: ['Sunah Premium', 'Tahan Lama', 'Wibawa'],
     hargaDummy: 'Rp 145.000 / 6ml',
     status: 'aktif',
-    penilaian: { C1: 5, C2: 5, C3: 3, C4: 4, C5: 4 }
+    penilaian: { C1: 5, C2: 4, C3: 5, C4: 5, C5: 4, C6: 4, C7: 4 }
   },
   {
     id: 'ARM-03',
@@ -86,7 +104,7 @@ export const DUMMY_AROMA = [
     tag: ['Sunah Bersuci', 'Segar', 'Tahan Lama'],
     hargaDummy: 'Rp 45.000 / 6ml',
     status: 'aktif',
-    penilaian: { C1: 4, C2: 4, C3: 4, C4: 5, C5: 1 }
+    penilaian: { C1: 4, C2: 4, C3: 4, C4: 3, C5: 1, C6: 4, C7: 5 }
   },
   {
     id: 'ARM-04',
@@ -98,7 +116,7 @@ export const DUMMY_AROMA = [
     tag: ['Menenangkan', 'Kayu Alami'],
     hargaDummy: 'Rp 85.000 / 6ml',
     status: 'aktif',
-    penilaian: { C1: 4, C2: 4, C3: 5, C4: 3, C5: 3 }
+    penilaian: { C1: 4, C2: 4, C3: 4, C4: 3, C5: 3, C6: 4, C7: 4 }
   },
   {
     id: 'ARM-05',
@@ -110,7 +128,7 @@ export const DUMMY_AROMA = [
     tag: ['Bunga Nabawi', 'Menyegarkan'],
     hargaDummy: 'Rp 70.000 / 6ml',
     status: 'aktif',
-    penilaian: { C1: 3, C2: 3, C3: 4, C4: 4, C5: 2 }
+    penilaian: { C1: 3, C2: 4, C3: 3, C4: 4, C5: 2, C6: 4, C7: 4 }
   },
   {
     id: 'ARM-06',
@@ -122,13 +140,13 @@ export const DUMMY_AROMA = [
     tag: ['Eksotis', 'Kuat'],
     hargaDummy: 'Rp 110.000 / 6ml',
     status: 'aktif',
-    penilaian: { C1: 3, C2: 5, C3: 3, C4: 3, C5: 4 }
+    penilaian: { C1: 3, C2: 4, C3: 5, C4: 5, C5: 4, C6: 3, C7: 3 }
   }
 ];
 
 export const DUMMY_DASHBOARD_STATS = {
   totalAroma: 6,
-  totalKriteria: 5,
+  totalKriteria: 7,
   alternatifSiap: 6,
   totalRekomendasiTersimpan: 12,
   statusBobot: {
@@ -148,38 +166,38 @@ export const DUMMY_TOP_RANKING = [
     id: 'ARM-01',
     nama: 'Kasturi Putih (White Musk)',
     kategori: 'Musky',
-    skor: 0.9240,
-    persen: '92.40%',
+    skor: 0.8750,
+    persen: '87.50%',
     status: 'Sangat Direkomendasikan',
-    highlight: 'Kesesuaian Sunah & Kelembutan Tertinggi'
+    highlight: 'Kesesuaian Sunah & Karakter Aroma Tertinggi'
   },
   {
     rank: 2,
     id: 'ARM-03',
     nama: 'Misk Thaharah',
     kategori: 'Musky Floral',
-    skor: 0.8850,
-    persen: '88.50%',
+    skor: 0.8400,
+    persen: '84.00%',
     status: 'Direkomendasikan',
-    highlight: 'Sangat Ekonomis & Kesukaan Publik Tinggi'
+    highlight: 'Sangat Ekonomis & Kesukaan Aroma Tinggi'
   },
   {
     rank: 3,
     id: 'ARM-02',
     nama: 'Gaharu Kalbar (Oud Kalimantan)',
     kategori: 'Woody Oriental',
-    skor: 0.8610,
-    persen: '86.10%',
+    skor: 0.8075,
+    persen: '80.75%',
     status: 'Direkomendasikan',
-    highlight: 'Longevity Terbaik & Wewangian Agung'
+    highlight: 'Ketahanan & Intensitas Terbaik'
   },
   {
     rank: 4,
     id: 'ARM-04',
     nama: 'Cendana Keraton',
     kategori: 'Woody',
-    skor: 0.7920,
-    persen: '79.20%',
+    skor: 0.7100,
+    persen: '71.00%',
     status: 'Cukup Direkomendasikan',
     highlight: 'Karakter Lembut & Menenangkan'
   }
@@ -196,7 +214,7 @@ export const DUMMY_AKTIVITAS_TERBARU = [
     id: 'ACT-2',
     waktu: '1 jam yang lalu',
     tipe: 'kriteria',
-    deskripsi: 'Bobot kriteria C1 (Kesesuaian Sunah) diverifikasi pada 25%.'
+    deskripsi: 'Bobot kriteria C1 (Kesesuaian Riwayat Sunah) diverifikasi pada 20%.'
   },
   {
     id: 'ACT-3',

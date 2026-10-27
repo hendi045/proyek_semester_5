@@ -4,16 +4,21 @@ import { calculateSAW } from '../lib/sawEngine';
 
 const DataContext = createContext(null);
 
-const STORAGE_KEY_AROMA = 'qa_demo_aroma_data';
-const STORAGE_KEY_KRITERIA = 'qa_demo_kriteria_data';
-const STORAGE_KEY_RIWAYAT = 'qa_demo_riwayat_data';
+const STORAGE_KEY_AROMA = 'qa_demo_aroma_data_v2';
+const STORAGE_KEY_KRITERIA = 'qa_demo_kriteria_data_v2';
+const STORAGE_KEY_RIWAYAT = 'qa_demo_riwayat_data_v2';
 
 export function DataProvider({ children }) {
   // 1. Inisialisasi Aroma
   const [aromaList, setAromaList] = useState(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY_AROMA);
-      if (saved) return JSON.parse(saved);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0 && parsed[0]?.penilaian?.C7 !== undefined) {
+          return parsed;
+        }
+      }
     } catch (e) {
       console.warn('Gagal memuat aroma dari localStorage, menggunakan seed default:', e);
     }
@@ -24,7 +29,12 @@ export function DataProvider({ children }) {
   const [kriteriaList, setKriteriaList] = useState(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY_KRITERIA);
-      if (saved) return JSON.parse(saved);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length >= 7) {
+          return parsed;
+        }
+      }
     } catch (e) {
       console.warn('Gagal memuat kriteria dari localStorage, menggunakan seed default:', e);
     }

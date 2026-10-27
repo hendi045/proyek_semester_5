@@ -57,11 +57,13 @@ Metode SAW (sering dikenal sebagai metode penjumlahan terbobot) mencari penjumla
 ### Parameter Kriteria Default
 | Kode | Nama Kriteria | Sifat Atribut | Bobot ($W$) | Keterangan |
 | :---: | :--- | :---: | :---: | :--- |
-| **C1** | Kesesuaian Riwayat Sunah | Benefit | 25% | Hadis / atsar wewangian |
-| **C2** | Ketahanan Aroma (Longevity) | Benefit | 20% | Daya tahan pemakaian |
-| **C3** | Kelembutan Karakter Aroma | Benefit | 20% | Karakter aroma tidak menyengat |
-| **C4** | Popularitas & Kesukaan Pengguna | Benefit | 15% | Rating & preferensi jamaah |
-| **C5** | Tingkat Harga / Ekonomis | Cost | 20% | Efisiensi biaya |
+| **C1** | Kesesuaian Riwayat Sunah | Benefit | 20% | Hadis / atsar wewangian sunah |
+| **C2** | Karakter Aroma | Benefit | 15% | Profil keindahan & keharmonisan aroma |
+| **C3** | Ketahanan | Benefit | 15% | Longevity pemakaian pada kain / kulit |
+| **C4** | Intensitas | Benefit | 10% | Proyeksi & semerbak wangi (sillage) |
+| **C5** | Harga | Cost | 15% | Efisiensi biaya wewangian |
+| **C6** | Tujuan Penggunaan | Benefit | 10% | Fleksibilitas momentum ibadah |
+| **C7** | Tingkat Kesukaan Aroma | Benefit | 15% | Rating preferensi & penerimaan jemaah |
 | **TOTAL** | | | **100%** | **Valid & Siap Hitung** |
 
 ---

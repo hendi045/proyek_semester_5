@@ -145,9 +145,9 @@ export function DataKriteriaPage() {
             size="md"
             icon={RotateCcw}
             onClick={resetKriteriaData}
-            title="Kembalikan ke kriteria standar demo (C1-C5)"
+            title="Kembalikan ke kriteria standar demo (C1-C7)"
           >
-            Reset Standar C1-C5
+            Reset Standar C1-C7
           </Button>
           <Button
             variant="primary"
